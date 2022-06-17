@@ -1,0 +1,7 @@
+Dockerfile
+docker-compose.yml
+.dockerignore
+.gitignore
+.git
+node_modules
+allowedIds.json

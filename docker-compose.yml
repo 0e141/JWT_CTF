@@ -1,0 +1,16 @@
+version: "3"
+services:
+  challenge-1:
+    build: ./Challenge-1
+    ports:
+        - '60001:8080'
+
+  challenge-2:
+    build: ./Challenge-2
+    ports:
+        - '60002:8080'
+
+  challenge-3:
+    build: ./Challenge-3
+    ports:
+        - '60003:8080'

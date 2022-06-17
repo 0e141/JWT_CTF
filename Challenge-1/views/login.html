@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Login</title>
+</head>
+
+<style>
+  body{
+  height: 100vh;
+} 
+.container{
+  height: 100%;
+}
+</style>
+
+<body class="bg-light">
+
+  <div class="modal" id="infoModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h4 class="modal-title">Information</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <div class="modal-body">
+          This is a personal project that will soon be the next facebook.<br>
+          Still work in progress.<br>
+          If you want to see for yourself use the demo user: "user:password".<br>
+          If you want to learn from this amazing project, feel free to download it.<br>
+        </div>
+  
+        <div class="modal-footer">
+          <a type="button" class="btn btn-primary" href="/download">Get the code</a>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex align-items-center justify-content-center">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto mb-5">
+          <div class="card-body p-4 p-sm-5 bg-light">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+            <form action="/auth" method="POST">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control bg-light" id="floatingInput" placeholder="User"
+                  name="username" required autofocus>
+                <label for="floatingInput">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control bg-light" id="floatingPassword"
+                  placeholder="Password" name="password" required>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+
+  <div class="fixed-bottom mb-3 ms-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+    Information
+    </button>
+  </div>
+
+</body>
+
+</html>
