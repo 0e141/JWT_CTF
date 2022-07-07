@@ -1,12 +1,11 @@
 # This file represents the base specification of your challenge. It is used by
 # other tools to install and deploy your challenge.
 
-# Required sections
 name: "JWT 1/3"
 author: "Oliver Werner"
 category: web
 description: Can you find the way to the admin panel? 
-value: 100
+value: 50
 type: standard
 
 # The extra field provides additional fields for data during the install/sync commands/
@@ -19,30 +18,9 @@ type: standard
 #     minimum: 50
 
 # Settings used for Dockerfile deployment
-# If not used, remove or set to null
-# If you have a Dockerfile set to .
-# If you have an imaged hosted on Docker set to the image url (e.g. python/3.8:latest, registry.gitlab.com/python/3.8:latest)
-# Follow Docker best practices and assign a tag
 image: .
-# Specify a host to deploy the challenge onto.
-# The currently supported URI schemes are ssh:// and registry://
-# ssh is an ssh URI where the above image will be copied to and deployed (e.g. ssh://root@123.123.123.123)
-# registry is a Docker registry tag (e.g registry://registry.example.com/test/image)
-# host can also be specified during the deploy process: `ctf challenge deploy challenge --host=ssh://root@123.123.123.123`
+
 host: null
-
-# Optional settings
-
-# connection_info is used to provide a link, hostname, or instructions on how to connect to a challenge
-#connection_info: nc hostname 12345
-
-# healthcheck is a tool/script used to check a challenge
-# If connection_info was provided to CTFd when the challenge was installed, it will be passed to the healthcheck script:
-# ./writeup/exploit.sh --connection-info "nc hostname 12345"
-#healthcheck: writeup/exploit.sh
-
-# Can be removed if unused
-#attempts: 5
 
 # Flags specify answers that your challenge use. You should generally provide at least one.
 # Can be removed if unused
@@ -64,12 +42,7 @@ topics:
 tags:
     - web
     - jwt
-    - athentification
-
-# Provide paths to files from the same directory that this file is in
-# Accepts strings
-#files:
-#    - dist/source.py
+    - authentification
 
 # Hints are used to give players a way to buy or have suggestions. They are not
 # required but can be nice.
@@ -79,18 +52,10 @@ hints:
     - "Maybe the owner accidentially leaked something in the source code."
     - "If only timemachines would exist."
 
-# Requirements are used to make a challenge require another challenge to be
-# solved before being available.
-# Can be removed if unused
-# Accepts challenge names as strings or challenge IDs as integers
-#requirements:
-#    - "Warmup"
-#    - "Are you alive"
-
 # The state of the challenge.
 # If the field is omitted, the challenge is visible by default.
 # If provided, the field can take one of two values: hidden, visible.
-state: hidden
+state: visible
 
 # Specifies what version of the challenge specification was used.
 # Subject to change until ctfcli v1.0.0
